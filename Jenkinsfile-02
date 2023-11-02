@@ -13,9 +13,14 @@ pipeline {
                 }
             }
         }
-        stage('exe') {
+        stage('exe2') {
           steps {
             sh 'python fibonacci.py'
+          }
+        }
+        stage('exe') {
+          steps {
+            sh 'python devise.py'
           }
         }
     }
