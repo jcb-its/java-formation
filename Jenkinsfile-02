@@ -20,6 +20,7 @@ pipeline {
         }
         stage('exe') {
           steps {
+            sh 'python -m pip install requests bs4'
             sh 'python devise.py'
           }
         }
