@@ -4,6 +4,7 @@ pipeline {
             filename 'dockerfile'
         }
     }
+    stages {
         stage('Checkout') {
             steps {
                 script{
@@ -11,11 +12,6 @@ pipeline {
                     sh "ls -lart ./*"
                 }
             }
-        }
-        stage('exe2') {
-          steps {
-            sh 'python fibonacci.py'
-          }
         }
         stage('exe') {
           steps {
