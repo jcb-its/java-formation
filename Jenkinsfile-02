@@ -1,6 +1,8 @@
 pipeline {
-agent { dockerfile true }
-    stages {
+agent { 
+    dockerfile {
+        filename 'dockerfile'
+    }
         stage('Checkout') {
             steps {
                 script{
